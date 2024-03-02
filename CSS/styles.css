@@ -4,18 +4,62 @@ body {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     color: #0A3871;
-    min-height: 100dvh;
+    max-height: 100dvh;
+    max-width: 100dvw;
 
-    /* Estilos de prueba */
-    padding: 20px;
+    /* ----- Estilos de prueba ----- */
+    padding: 20px; /* MARGEN */
     font-size: 1.2rem;
+    /* ----------------------------- */
 }
 
-/* Estilos de prueba */
+/* ----- Estilos de prueba ----- */
 .git_container > * {
     box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.74);
     border-radius: 10px;
-    padding: 10px;
+    padding: 10px; /* MARGEN */
     text-align: center;
     font-weight: 500;
 }
+
+    .git_container {
+        --margenes: 50px;
+        display: grid;
+        gap: 20px; /* MARGEN */
+        grid-template:
+            "header" minmax(calc(10dvh - var(--margenes)), auto)
+            "main" minmax(calc(50dvh - var(--margenes)), auto)
+            "aside" minmax(calc(30dvh - var(--margenes)), auto)
+            "footer" minmax(calc(20dvh - var(--margenes)), auto);
+
+        .header {
+            grid-area: header;
+            background-color: blue;
+        }
+
+        .main {
+            grid-area: main;
+            background-color: orange;
+        }
+
+        .sidebar {
+            grid-area: aside;
+            background-color: red;
+        }
+
+        .footer {
+            grid-area: footer;
+            background-color: pink;
+        }
+    }
+
+    @media (min-width: 768px) {
+        .git_container {
+            grid-template:
+            "header header" minmax(calc(10dvh - var(--margenes)), auto)
+            "main aside" minmax(calc(50dvh - var(--margenes)), auto)
+            "main aside" minmax(calc(30dvh - var(--margenes)), auto)
+            "footer footer" minmax(calc(20dvh - var(--margenes)), auto);
+        }
+    }
+/* ----------------------------- */
