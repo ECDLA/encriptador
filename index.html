@@ -10,18 +10,27 @@
     <link rel="stylesheet" href="CSS/styles.css">
 </head>
 <body class="grid_container">
-    <header class="header">LOGO</header>
+    <header class="header">
+        <img class="header__logo" src="IMG/logo.svg" alt="logo alura">
+    </header>
 
     <article class="main">
-        TEXTO USUARIO
+        <input class="main__textoUsuario" placeholder="Inserte el texto aquí" type="text">
 
-        <div class="main__mensaje">MENSAJE</div>
+        <div class="main__mensaje">
+            <img class="mainMensaje__exclamacion" src="IMG/signo-exclamacion.svg" alt="signo exclamacion">
+            <p>Solo letras minúsculas y sin acentos</p>
+        </div>
+        
         <div class="main__botones">
-            <p class="mainBoton__encriptar">ENCRIPTAR</p>
-            <P class="mainBoton__desencriptar">DESENCRIPTAR</P>
+            <input class="mainBotones__encriptar" type="button" value="Encriptar">
+            <input class="mainBotones__desencriptar" type="button" value="Desencriptar">
         </div>
     </article>
 
-    <footer class="texto_salida">TEXTO SALIDA</footer>
+    <footer class="texto_salida">
+        <p>Ningún mensaje fue encontradn</p>
+        <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+    </footer>
 </body>
 </html>
