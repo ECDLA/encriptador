@@ -47,23 +47,31 @@ body {
             "mensaje" 18px
             "botones" 158px;
 
+            .main__mensaje {
+                background-color: violet;
+                display: flex;
+                align-items: center;
+
+                .mainMensaje__exclamacion {
+                    margin-right: 8px;
+                }
+            }
+
             .main__botones {
                 background-color: pink;
 
-                .mainBoton__encriptar {
+                .mainBotones__encriptar {
                     background-color: aqua;
                     height: 50%;
+                    width: 100%;
                 }
 
-                .mainBoton__desencriptar {
+                .mainBotones__desencriptar {
                     background-color: antiquewhite;
                     height: 50%;
+                    width: 100%;
                 }
 
-            }
-
-            .main__mensaje {
-                background-color: violet;
             }
         }
 
@@ -74,26 +82,5 @@ body {
     }
 
     @media (min-width: 768px) {
-        .grid_container {
-            grid-template:
-            "header" minmax(calc(5dvh - var(--margenes)), 96px)
-            "main" 55%
-            "footer" auto;
-
-            .main {
-                grid-template:
-                    "texto_usuario" auto
-                    "mensaje" 18px
-                    "botones" 67px;
-
-                .main__botones {
-                    display: flex;
-
-                    .mainBoton__encriptar, .mainBoton__desencriptar {
-                        width: 50%;
-                        height: 100%;
-                    }
-                }
-            }
-        }
+        
     }
