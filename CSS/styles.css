@@ -41,7 +41,7 @@ body {
             .main__textoUsuario {
                 /* Tamaño de caja */
                 max-width: 100%;
-                width: 90%;
+                width: calc(100% - 36px);
                 height: 35vh;
 
                 /* Fuente */
@@ -178,5 +178,36 @@ body {
     }
 
     @media (min-width: 768px) {
+        .grid_container {
+            .header {
+                .header__logo {
+                    margin: 73px 0 0 0;
+                }
+            }
 
+            .main {
+                .main__textoUsuario {
+                    margin: 116px 40px;
+                    width: calc(100% - 89px);
+                }
+
+                .main__mensaje {
+                    margin: 16px 40px;
+                }
+
+                .main__botones {
+                    display: flex;
+                    margin: 0px 40px;
+                    height: 67px;
+
+                    .mainBotones__encriptar {
+                        margin-right: 24px;
+                    }
+                }
+            }
+
+            .texto_salida {
+                margin: 40px;
+            }
+        }
     }
