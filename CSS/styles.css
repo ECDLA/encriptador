@@ -4,17 +4,11 @@ body {
     font-family: "Inter", sans-serif;
     font-weight: 400;
     color: #0A3871;
-    max-height: 100dvh;
-    max-width: 100dvw;
-
-    /* ----- Estilos de prueba ----- */
-    font-size: 1.2rem;
-    /* ----------------------------- */
 }
 
 .grid_container > *, .main > *, .main__botones > * {
     /* -- Aydua visual -- */
-    border: solid 5px red; /* MARGEN */
+    /* border: solid 5px red; /* MARGEN */
     border-radius: 5px;
     /* ----------------- */
 
@@ -22,55 +16,107 @@ body {
 
     .grid_container {
         --margenes: 0px;
-        height: 100dvh;
+        background-color: #F3F5FC;
 
         display: grid;
         grid-template:
-            "header" minmax(calc(5dvh - var(--margenes)), 96px)
-            "main" 70%
-            "footer" auto;
+        "header" 96px
+        "main"
+        "footer" auto;
 
         .header {
             grid-area: header;
-            background-color: blue;
+            /* background-color: blue; */
+
+            .header__logo {
+                margin: 24px 0 24px -15px;
+            }
         }
 
         .main {
             grid-area: main;
-            background-color: orange;
+            width: 100%;
+            /* background-color: orange; */
 
-            display: grid;
-            grid-template:
-            "texto_usuario" auto
-            "mensaje" 18px
-            "botones" 158px;
+            .main__textoUsuario {
+                /* Tamaño de caja */
+                max-width: 100%;
+                width: 90%;
+                height: 35vh;
+
+                /* Fuente */
+                font-family: "Inter", sans-serif;
+                color: #0A3871;
+                font-weight: 400;
+                line-height: 48px;
+                font-size: 32px;
+
+                background-color: #F3F5FC;
+                display: inline-block;
+                
+                border: none;
+                resize: none;
+                margin: 56px 16px;
+
+
+                &::placeholder {
+                    color: #0A3871;
+                    font-family: "Inter", sans-serif;
+                    font-weight: 400;
+                    line-height: 48px;
+                    font-size: 32px;
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }
 
             .main__mensaje {
-                background-color: violet;
                 display: flex;
                 align-items: center;
+                height: 18px;
+                margin-bottom: 16px;
+                margin-left: 16px;
 
                 .mainMensaje__exclamacion {
                     margin-right: 8px;
+                    width: 12px;
+                    font-weight: 400;
+                    line-height: 18px;
+                }
+
+                & > p {
+                    font-size: 12px;
                 }
             }
 
-            .main__botones {
-                background-color: pink;
-
-                .mainBotones__encriptar {
-                    background-color: aqua;
-                    height: 50%;
-                    width: 100%;
-                }
-
-                .mainBotones__desencriptar {
-                    background-color: antiquewhite;
-                    height: 50%;
-                    width: 100%;
-                }
+            .main__botones > * {
+                border-radius: 24px;
+                width: 100%;
+                height: 67px;
 
             }
+                .main__botones {
+                    height: 158px;
+                    margin: 0 16px;
+
+                    .mainBotones__encriptar {
+                        color: #FFFFFF;
+                        grid-area: encriptar;
+                        background-color: #0A3871;
+                        margin-bottom: 24px;
+                        border: none;
+                    }
+
+                    .mainBotones__desencriptar {
+                        grid-area: desencriptar;
+                        background-color: #F3F5FC;
+                        border: solid 1px #0A3871;
+                        color: #0A3871;
+                    }
+
+                }
         }
 
         .texto_salida {
@@ -81,8 +127,8 @@ body {
             box-shadow: 0px 24px 32px -8px #00000014;
 
             .textoSalida__aviso {
-                text-align: center;
                 padding: 32px;
+                text-align: center;
 
                 .textoSalidaAviso__uno {
                     font-weight: 700;
