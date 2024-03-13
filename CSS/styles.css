@@ -253,6 +253,16 @@ body {
 
                     .mainBotones__encriptar {
                         margin: 0 24px 0 0;
+
+                        &:hover {
+                            background-color: #082a53;
+                        }
+                    }
+
+                    .mainBotones__desencriptar {
+                        &:hover {
+                            background-color: #cad3f0;
+                        }
                     }
                 }
             }
@@ -265,6 +275,12 @@ body {
                 .textoSalida__aviso > img {
                     display: block;
                     width: 100%;
+                }
+
+                .textoSalida__mensaje {
+                     & > input:hover {
+                        background-color: #cad3f0;
+                    }
                 }
             }
         }
