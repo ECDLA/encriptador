@@ -260,6 +260,7 @@ body {
             .texto_salida {
                 display: flex;
                 align-items: center;
+                justify-content: center;
 
                 .textoSalida__aviso > img {
                     display: block;
