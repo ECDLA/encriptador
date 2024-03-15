@@ -18,7 +18,7 @@
     </header>
 
     <article class="main">
-        <textarea id="textoUsuario" class="main__textoUsuario" placeholder="Inserte el texto aquí" cols="0" rows="0"></textarea>
+        <textarea id="textoUsuario" onkeydown="accionEnter()" class="main__textoUsuario" placeholder="Inserte el texto aquí" cols="0" rows="0"></textarea>
 
         <div class="main__mensaje">
             <img class="mainMensaje__exclamacion" src="IMG/signo-exclamacion.svg" alt="signo exclamacion">
@@ -26,7 +26,7 @@
         </div>
         
         <div class="main__botones">
-            <input id="btnEncriptar" onclick="obtenerTextoUsuario()" class="mainBotones__encriptar" type="button" value="Encriptar">
+            <input id="btnEncriptar" onclick="desencriptar()" class="mainBotones__encriptar" type="button" value="Encriptar">
             <input class="mainBotones__desencriptar" type="button" value="Desencriptar">
         </div>
     </article>
