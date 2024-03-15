@@ -76,8 +76,7 @@ body {
                 display: flex;
                 align-items: center;
                 height: 18px;
-                margin-bottom: 16px;
-                margin-left: 16px;
+                margin: 0 16px 16px 16px;
 
                 .mainMensaje__exclamacion {
                     margin-right: 8px;
