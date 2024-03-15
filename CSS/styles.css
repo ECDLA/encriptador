@@ -153,6 +153,7 @@ body {
 
             .textoSalida__mensaje {
                 display: none;
+                flex-wrap: wrap;
                 & > p {
                     margin: 32px;
     

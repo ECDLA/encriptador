@@ -9,6 +9,9 @@ function accionEnter() {
 
             // Se previene el comportamiento por defecto del evento
             e.preventDefault();
+
+            // Dirigir a vinculo con id textoMostrar
+            document.getElementById('textoMostrar').scrollIntoView();
         }
     });
 }
@@ -26,11 +29,11 @@ function desencriptar() {
    
     let textoEncriptado =
         textoUsuario
-        .replace(/e/g, "enter")
-        .replace(/i/g, "imes")
-        .replace(/a/g, "ai")
-        .replace(/o/g, "ober")
-        .replace(/u/g, "ufat")
+        .replace(/[Eeé]/g, "enter")
+        .replace(/[Iií]/g, "imes")
+        .replace(/[Aaá]/g, "ai")
+        .replace(/[Ooó]/g, "ober")
+        .replace(/[Uuú]/g, "ufat")
 
     // Se ocultan los elementos con clases textoSalidaAviso__uno y textoSalidaAviso__dos
     document.querySelector('.textoSalida__aviso').style.display = 'none';
