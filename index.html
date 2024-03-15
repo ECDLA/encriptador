@@ -26,8 +26,8 @@
         </div>
         
         <div class="main__botones">
-            <input id="btnEncriptar" onclick="desencriptar()" class="mainBotones__encriptar" type="button" value="Encriptar">
-            <input class="mainBotones__desencriptar" type="button" value="Desencriptar">
+            <input id="btnEncriptar" onclick="encriptar()" class="mainBotones__encriptar" type="button" value="Encriptar">
+            <input id="btnDesencriptar" onclick="desencriptar()" class="mainBotones__desencriptar" type="button" value="Desencriptar">
         </div>
     </article>
 
@@ -39,7 +39,7 @@
         </div>
         <div class="textoSalida__mensaje">
             <p id="mensajeEncriptado">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</p>
-            <input type="button" value="Copiar">
+            <input id="btnCopiar" onclick="copiar()" type="button" value="Copiar">
         </div>
     </footer>
 </body>

@@ -152,8 +152,10 @@ body {
             }
 
             .textoSalida__mensaje {
+                height: 100%;
                 display: none;
                 flex-wrap: wrap;
+
                 & > p {
                     margin: 32px;
     
@@ -279,12 +281,16 @@ body {
                 }
 
                 .textoSalida__mensaje {
-                    height: 100%;
                     display: none;
                     align-content: space-between;
                     flex-wrap: wrap;
+                    width: 100%;
+                    
+                    & > p {
+                        width: 100%;
+                    }
 
-                     & > input:hover {
+                    & > input:hover {
                         background-color: #cad3f0;
                     }
                 }
