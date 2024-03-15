@@ -8,6 +8,9 @@
     <!-- Hojas de estilos -->
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/styles.css">
+
+    <!-- JavaScript -->
+    <script src="JS/main.js"></script>
 </head>
 <body class="grid_container">
     <header class="header">
@@ -23,7 +26,7 @@
         </div>
         
         <div class="main__botones">
-            <input class="mainBotones__encriptar" type="button" value="Encriptar">
+            <input id="btnEncriptar" onclick="obtenerTextoUsuario()" class="mainBotones__encriptar" type="button" value="Encriptar">
             <input class="mainBotones__desencriptar" type="button" value="Desencriptar">
         </div>
     </article>
