@@ -1,5 +1,20 @@
+function accionEnter() {
+    // Se obtiene el elemento con id textoUsuario y se le agrega un evento
+    document.getElementById('textoUsuario').addEventListener('keydown', function (e) {
+
+        // Si la tecla presionada es "Enter"
+        if (e.key === 'Enter') {
+            // Se llama a la función desencriptar
+            desencriptar();
+
+            // Se previene el comportamiento por defecto del evento
+            e.preventDefault();
+        }
+    });
+}
+
 // Definir funciones
-function obtenerTextoUsuario() {
+function desencriptar() {
     let textoUsuario = document.getElementById('textoUsuario').value;
     /*
     La letra "e" es convertida para "enter"
@@ -21,7 +36,7 @@ function obtenerTextoUsuario() {
     document.querySelector('.textoSalida__aviso').style.display = 'none';
 
     // Se muestran los elementos con clases textoSalida__mensaje
-    document.querySelector('.textoSalida__mensaje').style.display = 'block';
+    document.querySelector('.textoSalida__mensaje').style.display = 'flex';
     // Se muestra el texto convertido en el elemento con id mensajeEncriptado
     document.getElementById('mensajeEncriptado').innerHTML = textoEncriptado;
 }
