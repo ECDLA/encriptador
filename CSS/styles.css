@@ -278,6 +278,11 @@ body {
                 }
 
                 .textoSalida__mensaje {
+                    height: 100%;
+                    display: none;
+                    align-content: space-between;
+                    flex-wrap: wrap;
+
                      & > input:hover {
                         background-color: #cad3f0;
                     }
